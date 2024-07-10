@@ -1,0 +1,15 @@
+# Install a Package on Linux Instance
+- name: Install a Package
+  gather_facts: false
+  hosts: localhost
+  become: true
+  vars:
+    ansible_connection: aws_ssm
+    ansible_aws_ssm_bucket_name: sample-s3-bucket
+    ansible_aws_ssm_region: us-west-2
+    ansible_aws_ssm_instance_id: i-xxxxxxxxxx
+  tasks:
+    - name: Install jq
+      yum:
+        name: jq
+        state: present
