@@ -37,7 +37,7 @@ ansible-galaxy collection install community.aws
 
 1. Navigate to your SSO sigin in page
 2. Click on "Access Keys" next to the Profie you'd like to use
-3. Copy the block from Option 2 in to your AWS credentials file ( usually located at (~/.aws/credentials) )
+3. Copy the credentials block in to your AWS credentials file ( usually located at (~/.aws/credentials) )
 4. Call the profile `[production]` or update the `aws_profile` variable in playbook.yml to match
 
 ## Run the Playbook
